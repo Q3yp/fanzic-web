@@ -1,10 +1,5 @@
 {
   "name": "fanzic-site",
   "compatibility_date": "2025-09-01",
-  "build": {
-    "command": "npm run build"
-  },
-  "assets": {
-    "directory": "./out"
-  }
+  "pages_build_output_dir": ".vercel/output/static"
 }
