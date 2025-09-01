@@ -110,6 +110,14 @@ export default function ProductsPage() {
     const windowName = `video_${productName.replace(/\s+/g, '_')}`;
     window.open(videoUrl, windowName, 'width=800,height=600,scrollbars=yes,resizable=yes');
   };
+
+  const openSimulation = () => {
+    window.open('https://s.wuifarms.com/fan-simulation.html', 'fan_simulation', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+  };
+
+  const scrollToSimulation = () => {
+    document.getElementById('simulation-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
   
   return (
     <>
@@ -134,21 +142,32 @@ export default function ProductsPage() {
               <h1 className="text-6xl font-bold text-fandi-blue mb-6">{t('title')}</h1>
               <p className="text-2xl text-gray-600 leading-relaxed mb-8">{t('subtitle')}</p>
               <div className="text-xl text-gray-600 leading-relaxed">
-                <a 
-                  href={locale === 'zh' ? '/2-6款风机对应详情页/辉途_风机单页中文版_250818.pdf' : '/2-6款风机对应详情页/4.Fandi fan brochure-0818.pdf'}
-                  download
-                  className="float-right ml-6 mb-4 inline-flex items-center px-8 py-4 bg-fandi-blue text-white font-bold text-lg rounded-xl hover:bg-blue-700 transition-all duration-300 hover:shadow-xl hover:scale-105 whitespace-nowrap"
-                >
-                  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  {t('brochures.download')}
-                </a>
+                <div className="flex gap-4 justify-end">
+                  <button
+                    onClick={scrollToSimulation}
+                    className="inline-flex items-center px-6 py-3 bg-fandi-red text-white font-bold text-lg rounded-xl hover:bg-red-700 transition-all duration-300 hover:shadow-xl hover:scale-105 whitespace-nowrap"
+                  >
+                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    {t('simulation.scrollButton')}
+                  </button>
+                  <a 
+                    href={locale === 'zh' ? '/2-6款风机对应详情页/辉途_风机单页中文版_250818.pdf' : '/2-6款风机对应详情页/4.Fandi fan brochure-0818.pdf'}
+                    download
+                    className="inline-flex items-center px-6 py-3 bg-fandi-blue text-white font-bold text-lg rounded-xl hover:bg-blue-700 transition-all duration-300 hover:shadow-xl hover:scale-105 whitespace-nowrap"
+                  >
+                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    {t('brochures.download')}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        
+ 
         {/* Products Grid Section */}
         <section className="py-24">
           <div className="container-width section-padding">
@@ -198,6 +217,34 @@ export default function ProductsPage() {
             ))}
           </div>
 
+          </div>
+        </section>
+
+        {/* Fan Simulation Section */}
+        <section id="simulation-section" className="py-16 bg-gray-500">
+          <div className="container-width section-padding">
+            <div className="bg-black rounded-2xl shadow-xl overflow-hidden relative">
+              <div className="aspect-video bg-black relative">
+                <iframe
+                  src="https://s.wuifarms.com/fan-simulation.html"
+                  className="w-full h-full border-0"
+                  title={t('simulation.title')}
+                  allowFullScreen
+                />
+                <button
+                  onClick={openSimulation}
+                  className="absolute top-4 right-4 bg-fandi-blue text-white p-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg group"
+                  title={t('simulation.button')}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  <span className="absolute right-0 top-full mt-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    {t('simulation.button')}
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </main>

@@ -374,6 +374,14 @@
           "applications": ["Dairy farms", "Cattle barns", "Large livestock facilities"],
           "features": ["Large airflow", "Low noise operation", "Circular energy-saving", "Cooling comfort", "Livestock-safe design", "IoT integration"]
         }
+      },
+      "simulation": {
+        "title": "Fan Airflow Simulation",
+        "subtitle": "Interactive 3D visualization of fan airflow patterns and performance",
+        "description": "Experience our fan technology through an interactive 3D simulation showing airflow patterns, wind field distribution, and performance characteristics.",
+        "button": "Launch Simulation",
+        "scrollButton": "View Simulation",
+        "newTab": "Opens in new window"
       }
     }
   }
