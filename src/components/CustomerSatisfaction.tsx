@@ -48,7 +48,7 @@ export default function CustomerSatisfaction() {
   return (
     <>
       {/* Main content section */}
-      <section className="bg-gray-50 py-20">
+      <section className="py-20 section-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Company facility image */}
@@ -86,7 +86,7 @@ export default function CustomerSatisfaction() {
       </section>
 
       {/* Feature cards - full width banner */}
-      <section className="bg-gray-100 py-12">
+      <section className="py-12 section-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             {features.map((feature, index) => (

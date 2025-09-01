@@ -17,7 +17,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} bg-aged-paper`}>
+      <body className={`${inter.className} bg-gradient-to-br from-blue-50 to-aged-paper`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

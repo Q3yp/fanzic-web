@@ -72,7 +72,7 @@ export default function ProductBanner() {
   const duplicatedProducts = [...products, ...products];
 
   return (
-    <section className="py-12 bg-white overflow-hidden">
+    <section className="py-12 section-light overflow-hidden">
       <div className="container-width section-padding">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -89,10 +89,10 @@ export default function ProductBanner() {
             {duplicatedProducts.map((product, index) => (
               <div 
                 key={`${product.id}-${Math.floor(index / products.length)}`}
-                className="flex-shrink-0 w-80 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="flex-shrink-0 w-80 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Product Image */}
-                <div className="aspect-[16/9] bg-white rounded-t-xl relative overflow-hidden">
+                <div className="aspect-[16/9] bg-gray-50 rounded-t-xl relative overflow-hidden">
                   <Image
                     src={product.image}
                     alt={locale === 'zh' ? product.nameZh : product.name}

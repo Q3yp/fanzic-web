@@ -41,7 +41,7 @@ export default function Certifications() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 section-darker">
       <div className="container-width section-padding">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('title')}</h2>
@@ -49,10 +49,10 @@ export default function Certifications() {
         </div>
 
         {/* All Certifications in Single Row */}
-        <div className="flex justify-center items-center space-x-8">
+        <div className="flex justify-center items-center space-x-12">
           {certificates.map((cert) => (
             <div key={cert.id} className="text-center group relative">
-              <div className="w-32 h-32 bg-white rounded-lg p-3 relative mx-auto mb-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+              <div className="w-48 h-48 bg-white rounded-lg p-4 relative mx-auto mb-4 shadow-lg transition-all duration-300 hover:shadow-xl">
                 <Image
                   src={cert.image}
                   alt={cert.title}

@@ -116,7 +116,7 @@ export default function ProductsPage() {
       <Header />
       <main className="">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-24 overflow-hidden">
+        <section className="relative py-24 overflow-hidden">
           
           {/* Background Image */}
           <div className="absolute inset-0 opacity-20">
@@ -150,7 +150,7 @@ export default function ProductsPage() {
         </section>
         
         {/* Products Grid Section */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container-width section-padding">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {products.map((product) => (

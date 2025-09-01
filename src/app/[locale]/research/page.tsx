@@ -11,7 +11,7 @@ export default function ResearchPage() {
       <Header />
       <main className="">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-24 overflow-hidden">
+        <section className="relative py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image
               src="/factory-images/windtunnel.png"
@@ -82,7 +82,7 @@ export default function ResearchPage() {
         </section>
 
         {/* Wind Tunnel Testing Section */}
-        <section className="py-24 bg-white">
+        <section className="py-24 section-light">
           <div className="container-width section-padding">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -157,7 +157,7 @@ export default function ResearchPage() {
         </section>
 
         {/* Research Workstation Section */}
-        <section className="py-24 bg-gray-50">
+        <section className="py-24 section-darker">
           <div className="container-width section-padding">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative order-2 lg:order-1">

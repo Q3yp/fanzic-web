@@ -60,7 +60,7 @@ export default function CustomerReviews() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 section-light">
       <div className="container-width section-padding">
         {/* Header */}
         <div className="text-center mb-12">
